@@ -1,10 +1,31 @@
+
+<!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="css/styles.css"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <title>Ссылки</title>
 </head>
 <body>
 
+  <header id="header">
+    <div class="content"> 
+      <a href="https://avatars.mds.yandex.net/get-entity_search/44747/978371215/S600xU_2x"><img id="logo" src="https://i.pinimg.com/736x/26/97/95/269795d2a83febb17d679530a693bd27.jpg" alt="Логотип сайта">
+        <nav class="nav-right">
+          <ul>
+            <li><a href="#">Ссылка 1</a></li>
+            <li><a href="#">Ссылка 2</a></li>
+            <li><a href="#">Ссылка 3</a></li>
+          </ul>
+        </nav>
+        <div class="title">
+          <p> Название сайта </p>
+        </div>
+    </div>
+  </header>
+
+<main id = "main">
   <h1>Список гиперссылок</h1>
 
   <ol>
@@ -28,16 +49,26 @@
     <li>Относительная ссылка на страницу в каталоге двумя уровнями выше: <a href="about/index.html">Каталог двумя уровнями выше</a></li>
   </ol>
 
-  <p> 13. Пример контекстной ссылки в тексте абзаца: <a href="https://vk.com/">Это ссылка на внешний сайт</a>. </p>
+  <p>13. Пример контекстной ссылки в тексте абзаца: <a href="https://vk.com/">Это ссылка на внешний сайт</a>. </p>
 
-  <p> 14. Ссылка на фрагмент страницы стороннего сайта: <a href="https://www.vk.com#fragment">Ссылка на фрагмент</a></p>
+  <p>14. Ссылка на фрагмент страницы стороннего сайта: <a href="https://www.vk.com#fragment">Ссылка на фрагмент</a></p>
 
-  <img src="https://i.pinimg.com/originals/de/05/0f/de050f71079e75709d82a73543a96e6a.jpg" alt="Пример изображения" width="600" usemap="#image-map">
-  <p> 15. Пример прямоугольной и круглой области</p>
-  <map name="image-map">
-    <area shape="rect" coords="0,0,100,100" href="https://rutube.ru/" alt="Прямоугольная область">
-    <area shape="circle" coords="200,200,50" href="https://plvideo.ru/" alt="Круглая область">
-  </map>
+  <p>15. Пример прямоугольной и круглой области</p>
+  <h3>Прямоугольная область</h3>
+
+    <img src="https://cdn.shopify.com/s/files/1/0895/0864/products/42-17207197_1024x1024.jpeg?v=1450884955" width = 400 usemap="#image" alt="Прямоугольное изображение">
+
+    <map name="image">
+      <area shape="rect" coords="0,0,400,400" href="https://ru.wikipedia.org/wiki/Джек-рассел-терьер" alt="Перейти на сайт">
+    </map>
+
+  <h3>Круглая область</h3>
+
+    <img src="https://i.pinimg.com/736x/26/97/95/269795d2a83febb17d679530a693bd27.jpg"  width = 100 usemap="#image1" alt="Круглое изображение">
+
+    <map name="image1">
+        <area shape="circle" coords="100,100,100" href="https://plvideo.ru/" alt="Перейти на сайт">
+    </map>
 
   <ol start = "16">
     <li>Ссылка с пустым href: <a href=""></a></li>
@@ -50,8 +81,59 @@
     <li>Ссылка с title: <a href="https://www.rutube.com" title="Описание     ссылки">Ссылка с описанием</a></li>
     <li>Ссылка с title: <a href="https://www.plvideo.ru" title="Описание ссылки">Ссылка с описанием</a></li>
   </ol>
-    <p> 21. Ссылка на файл на сервере FTP с авторизацией: <a href="ftp://user:password@ftp.server.com/file.txt">Файл на FTP</a></p>
-      <h2>Форма</h2>
+  <p>21. Ссылка на файл на сервере FTP с авторизацией: <a href="ftp://user:password@ftp.server.com/file.txt">Файл на FTP</a></p>
+    
+  <h2>Таблица</h2>
+
+  <table id="empty-table"> 
+    <thead>
+      <tr>
+        <th>Название 1</th>
+        <th>Название 2</th>
+        <th>Название 3</th>
+        <th>Название 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan = "2">Объединенный столбец</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td> 
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td rowspan = "2">Объединая строка</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Форма</h2>
   <form>
     <label for="fio">ФИО:</label><br>
     <input type="text" id="fio" name="fio"><br><br>
@@ -73,7 +155,7 @@
 
     <label for="languages">Любимый язык программирования:</label><br>
     <select id="languages" name="languages" multiple>
-    <option value="Pascal">Pascal</option>
+      <option value="Pascal">Pascal</option>
       <option value="C">C</option>
       <option value="C++">C++</option>
       <option value="JavaScript">JavaScript</option>
@@ -94,8 +176,13 @@
 
     <input type="submit" value="Сохранить">
   </form>
+</main>
 
-
+<footer>
+    <div class="container">
+      <p>&copy; Дарья Фомичева</p>
+    </div>
+</footer>
 
 </body>
 </html>
